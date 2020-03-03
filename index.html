@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Robo Ajax</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="row" id="roboMK1">
+            <div class="col-sm-12 col-lg-4 col-md-6">
+                <div class="card border-secondary">
+                    <img src="https://www.thegadgetstore.ie/user/products/large/tobbie-diy-robot-build-your-own-gadget.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" id="robot-name">Robot MK-1</h5>
+                        <hr>
+                        <h5 class="card-title">Status</h5>
+                        <p class="small">City: <span id="MK1statusCity"></span></p>
+                        <p class="small">Movie: <span id="MK1statusMovie"></span></p>
+                        <p class="small">Name: <span id="MK1statusName"></span></p>
+
+                        <hr>
+                        <p class="card-text">Hello there, I am the Robot MK-1... What would you like to do?</p>
+
+                        <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                            <button type="button" class="btn btn-dark" id="setMK1City">Set my home city</button>
+                            <button type="button" class="btn btn-dark" id="setMK1Movie">Set my Favorite movie</button>
+                            <button type="button" class="btn btn-dark" id="setMK1Name">Set my name</button>
+
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text">I promise I'll fix it in future soon :)</p>
+                        <div class="btn-group btn-group-sm mt-2" role="group" aria-label="...">
+                            <button type="button" class="btn btn-secondary" id="findCityWther">Find the
+                                weather</button>
+                            <button type="button" class="btn btn-secondary" id="setMK1Music">Search for
+                                Movie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+    <div class="row" id="widgets">
+
+        <div class="col-sm-12 col-lg-8 col-md-6">
+
+            <div class="jumbotron">
+                <h1 class="display-4">Robo Widgets with Callbacks</h1>
+                <p class="lead">These three widges recieve callbacks from the robot when all information is
+                    updated</p>
+                <hr class="my-4">
+
+
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Robot MK-1 Weather Widget 1
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                I track all the locations the Robot has lived and the weather in each city!
+                                <ul class="list-group" id="RoboWeatherResults1"></ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Robot MK-1 Movie Widget 2
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                I track all the movies the Robot has liked!
+                                <ul class="list-group" id="RoboMovieResults2"></ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script src='robotMarkOne.js'></script>
+    <script src='robotMarkTwo.js'></script>
+    <script src='widgets.js'></script>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
